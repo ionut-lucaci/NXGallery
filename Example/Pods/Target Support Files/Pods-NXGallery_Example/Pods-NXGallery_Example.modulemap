@@ -1,0 +1,6 @@
+framework module Pods_NXGallery_Example {
+  umbrella header "Pods-NXGallery_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

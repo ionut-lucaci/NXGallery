@@ -1,0 +1,795 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182BCF5F4ED360F3274753DD862DF1E3 /* NXGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDCF529614541AA0B201F53DE91648B2 /* NXGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FA156BFF2CED49554E9F50D10EA51BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7794A1CA58357BDC418C945E963A567A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		85F8B4C6598B055AD8B4173E852D64D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A4DD9B0CFB03B28A5A62BD528FC6A14C /* Pods-NXGallery_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB04ECD781AE147F16D6B579E4E171 /* Pods-NXGallery_Tests-dummy.m */; };
+		AA14825C4CAD24AB652686B804B37A61 /* Pods-NXGallery_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4057E9DA28D39A9B3437C2A205BA81C2 /* Pods-NXGallery_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6818BA2F2E04FA780F775B81325ED23 /* NXGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C6800247FB0CD460313EE0172CEF0A /* NXGallery-dummy.m */; };
+		C6CA75F328B68E8F00FF7291 /* NXGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CA75F128B68E8F00FF7291 /* NXGallery.storyboard */; };
+		C6CA75F428B68E8F00FF7291 /* NXGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA75F228B68E8F00FF7291 /* NXGallery.swift */; };
+		CAF7904958AEF71322DBA2E7A5480C79 /* Pods-NXGallery_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D0575196BBCC4F3ACE8C4AC50341D3 /* Pods-NXGallery_Example-dummy.m */; };
+		DDD636BE07DBC75327F56FE087EA1022 /* Pods-NXGallery_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C015D7DA83C0F67B0EBDCA8C588F513 /* Pods-NXGallery_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45A8DE28B9C775B74CCC34AC64EDA96C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB23167A284209CEF96D7FEA4F0226C7;
+			remoteInfo = "Pods-NXGallery_Example";
+		};
+		DB4F15C354662AD2B6AFF0882B3E118A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73C915ADB11742C548F06F71D2C63DE2;
+			remoteInfo = NXGallery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00669F4BF306B303505885D1AC2397ED /* Pods-NXGallery_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXGallery_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		06D0575196BBCC4F3ACE8C4AC50341D3 /* Pods-NXGallery_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NXGallery_Example-dummy.m"; sourceTree = "<group>"; };
+		08FB840C33B30B54D5E346071B367037 /* Pods-NXGallery_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXGallery_Example-Info.plist"; sourceTree = "<group>"; };
+		13FF7817694890AA26AC7898C069998E /* Pods-NXGallery_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NXGallery_Tests.modulemap"; sourceTree = "<group>"; };
+		23ABC1BFA553DD9847C9198F73B8C6F8 /* NXGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NXGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F8D369EDA3CBCADE630B816D94A7A04 /* NXGallery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NXGallery.modulemap; sourceTree = "<group>"; };
+		336D1C6756E82BD472B6A64F48029323 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4057E9DA28D39A9B3437C2A205BA81C2 /* Pods-NXGallery_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NXGallery_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4AFFAD4F51C9016E0D62F2F7B46AB00B /* NXGallery.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NXGallery.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		5C015D7DA83C0F67B0EBDCA8C588F513 /* Pods-NXGallery_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NXGallery_Example-umbrella.h"; sourceTree = "<group>"; };
+		6B66E61D5666B724068D62C593FFC017 /* Pods-NXGallery_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NXGallery_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6CCB04ECD781AE147F16D6B579E4E171 /* Pods-NXGallery_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NXGallery_Tests-dummy.m"; sourceTree = "<group>"; };
+		6EC0A130F734BD4340AA4CE5AB28608F /* Pods-NXGallery_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXGallery_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7827137B02F948CF1E7994E22659FEEA /* Pods-NXGallery_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXGallery_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		912539C7FD4E193BD63E1314C298D868 /* Pods-NXGallery_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXGallery_Example.release.xcconfig"; sourceTree = "<group>"; };
+		97CAF9C735C7DBA37083CBEAD3F40B01 /* Pods-NXGallery_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXGallery_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A35C3DC294D0A97532B295C8C3834C34 /* Pods_NXGallery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NXGallery_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC93E21F09C657F7D84A253C173820C7 /* Pods_NXGallery_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NXGallery_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1394A12AD3E9E9C02AE3BC4EC1C139 /* NXGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NXGallery.debug.xcconfig; sourceTree = "<group>"; };
+		AD85C69E9917D483008B533B20F2E361 /* Pods-NXGallery_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NXGallery_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AE2FE86F0E0C29CC2915188C8F28CBDE /* NXGallery-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NXGallery-Info.plist"; sourceTree = "<group>"; };
+		B39491C10634F4906E4626391DE9EBA1 /* NXGallery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NXGallery-prefix.pch"; sourceTree = "<group>"; };
+		BEA0CB3CC84E932904AC501C19BF4C9A /* Pods-NXGallery_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NXGallery_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C6B2E99F38B2FF7D7C3FA8AC1B2F1ED1 /* NXGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NXGallery.release.xcconfig; sourceTree = "<group>"; };
+		C6CA75F128B68E8F00FF7291 /* NXGallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NXGallery.storyboard; sourceTree = "<group>"; };
+		C6CA75F228B68E8F00FF7291 /* NXGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NXGallery.swift; sourceTree = "<group>"; };
+		CDCF529614541AA0B201F53DE91648B2 /* NXGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NXGallery-umbrella.h"; sourceTree = "<group>"; };
+		E0C6800247FB0CD460313EE0172CEF0A /* NXGallery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NXGallery-dummy.m"; sourceTree = "<group>"; };
+		ECAB30B4DC5FBC694BD783EBF90899CB /* Pods-NXGallery_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NXGallery_Tests-Info.plist"; sourceTree = "<group>"; };
+		EF770445A429AB4C986BC16D0549AC33 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8C381AEBB8DC8136A7A271EB03F760D /* Pods-NXGallery_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NXGallery_Example-frameworks.sh"; sourceTree = "<group>"; };
+		FE551B366C9B6FBA3B0E9695E243C8A4 /* Pods-NXGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NXGallery_Example.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A29D51E8E8ED474270FB6956A1DC59E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FA156BFF2CED49554E9F50D10EA51BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D96A3FD9ECC61936CBD913F3E1A17FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7794A1CA58357BDC418C945E963A567A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D84DB185F7536BFFB99F7C29F240F1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85F8B4C6598B055AD8B4173E852D64D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F9FEDC681FB992048B5CFEB080570B8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9D75F5B2ADAA5659CB18422D0F76DBD /* Pods-NXGallery_Example */,
+				DEF928A8DBDD8DCB7E0BF0A6F14A24E4 /* Pods-NXGallery_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5242C46C33D8CB3CA0AA4CD20E1533DA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				336D1C6756E82BD472B6A64F48029323 /* LICENSE */,
+				4AFFAD4F51C9016E0D62F2F7B46AB00B /* NXGallery.podspec */,
+				EF770445A429AB4C986BC16D0549AC33 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		639804B7D89DA67E4BE4D2D2E169689C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3999226745DE6B43C0D10DC3D4D98E2 /* NXGallery */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		914FC13D5BA77A481B9D6314368C8C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23ABC1BFA553DD9847C9198F73B8C6F8 /* NXGallery.framework */,
+				A35C3DC294D0A97532B295C8C3834C34 /* Pods_NXGallery_Example.framework */,
+				AC93E21F09C657F7D84A253C173820C7 /* Pods_NXGallery_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0A9615F076EAE26866FDF90D865679 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F8D369EDA3CBCADE630B816D94A7A04 /* NXGallery.modulemap */,
+				E0C6800247FB0CD460313EE0172CEF0A /* NXGallery-dummy.m */,
+				AE2FE86F0E0C29CC2915188C8F28CBDE /* NXGallery-Info.plist */,
+				B39491C10634F4906E4626391DE9EBA1 /* NXGallery-prefix.pch */,
+				CDCF529614541AA0B201F53DE91648B2 /* NXGallery-umbrella.h */,
+				AD1394A12AD3E9E9C02AE3BC4EC1C139 /* NXGallery.debug.xcconfig */,
+				C6B2E99F38B2FF7D7C3FA8AC1B2F1ED1 /* NXGallery.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NXGallery";
+			sourceTree = "<group>";
+		};
+		C3999226745DE6B43C0D10DC3D4D98E2 /* NXGallery */ = {
+			isa = PBXGroup;
+			children = (
+				C6CA75F528B692C600FF7291 /* Classes */,
+				5242C46C33D8CB3CA0AA4CD20E1533DA /* Pod */,
+				AA0A9615F076EAE26866FDF90D865679 /* Support Files */,
+			);
+			name = NXGallery;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C6CA75F528B692C600FF7291 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C6CA75F128B68E8F00FF7291 /* NXGallery.storyboard */,
+				C6CA75F228B68E8F00FF7291 /* NXGallery.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				639804B7D89DA67E4BE4D2D2E169689C /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				914FC13D5BA77A481B9D6314368C8C1B /* Products */,
+				1F9FEDC681FB992048B5CFEB080570B8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEF928A8DBDD8DCB7E0BF0A6F14A24E4 /* Pods-NXGallery_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				13FF7817694890AA26AC7898C069998E /* Pods-NXGallery_Tests.modulemap */,
+				AD85C69E9917D483008B533B20F2E361 /* Pods-NXGallery_Tests-acknowledgements.markdown */,
+				00669F4BF306B303505885D1AC2397ED /* Pods-NXGallery_Tests-acknowledgements.plist */,
+				6CCB04ECD781AE147F16D6B579E4E171 /* Pods-NXGallery_Tests-dummy.m */,
+				ECAB30B4DC5FBC694BD783EBF90899CB /* Pods-NXGallery_Tests-Info.plist */,
+				4057E9DA28D39A9B3437C2A205BA81C2 /* Pods-NXGallery_Tests-umbrella.h */,
+				97CAF9C735C7DBA37083CBEAD3F40B01 /* Pods-NXGallery_Tests.debug.xcconfig */,
+				6EC0A130F734BD4340AA4CE5AB28608F /* Pods-NXGallery_Tests.release.xcconfig */,
+			);
+			name = "Pods-NXGallery_Tests";
+			path = "Target Support Files/Pods-NXGallery_Tests";
+			sourceTree = "<group>";
+		};
+		F9D75F5B2ADAA5659CB18422D0F76DBD /* Pods-NXGallery_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FE551B366C9B6FBA3B0E9695E243C8A4 /* Pods-NXGallery_Example.modulemap */,
+				6B66E61D5666B724068D62C593FFC017 /* Pods-NXGallery_Example-acknowledgements.markdown */,
+				7827137B02F948CF1E7994E22659FEEA /* Pods-NXGallery_Example-acknowledgements.plist */,
+				06D0575196BBCC4F3ACE8C4AC50341D3 /* Pods-NXGallery_Example-dummy.m */,
+				F8C381AEBB8DC8136A7A271EB03F760D /* Pods-NXGallery_Example-frameworks.sh */,
+				08FB840C33B30B54D5E346071B367037 /* Pods-NXGallery_Example-Info.plist */,
+				5C015D7DA83C0F67B0EBDCA8C588F513 /* Pods-NXGallery_Example-umbrella.h */,
+				BEA0CB3CC84E932904AC501C19BF4C9A /* Pods-NXGallery_Example.debug.xcconfig */,
+				912539C7FD4E193BD63E1314C298D868 /* Pods-NXGallery_Example.release.xcconfig */,
+			);
+			name = "Pods-NXGallery_Example";
+			path = "Target Support Files/Pods-NXGallery_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2476E19D950B9617DC1D6A649557D109 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182BCF5F4ED360F3274753DD862DF1E3 /* NXGallery-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293AA2050EF3AFF4D7C2296018409EE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDD636BE07DBC75327F56FE087EA1022 /* Pods-NXGallery_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81489D656BB1A67BE5F47D52C562E496 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA14825C4CAD24AB652686B804B37A61 /* Pods-NXGallery_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73C915ADB11742C548F06F71D2C63DE2 /* NXGallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3442D56686A547782AA2F823549681C3 /* Build configuration list for PBXNativeTarget "NXGallery" */;
+			buildPhases = (
+				2476E19D950B9617DC1D6A649557D109 /* Headers */,
+				3F7D578A776863B574B86C9279A848E2 /* Sources */,
+				0A29D51E8E8ED474270FB6956A1DC59E /* Frameworks */,
+				BCF9D361BBEA71325DD8AE5B197C0A53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NXGallery;
+			productName = NXGallery;
+			productReference = 23ABC1BFA553DD9847C9198F73B8C6F8 /* NXGallery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F17BE910871E72B6CEF651083FDE249 /* Pods-NXGallery_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 597013270FC6BCDD138E9236EA50C0A9 /* Build configuration list for PBXNativeTarget "Pods-NXGallery_Tests" */;
+			buildPhases = (
+				81489D656BB1A67BE5F47D52C562E496 /* Headers */,
+				8271E23A7CA5932C285F28B2780EA919 /* Sources */,
+				1D96A3FD9ECC61936CBD913F3E1A17FC /* Frameworks */,
+				371C95BDB9C0BA3BAEF50ACBA38657BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE4FA183CE70193411D717252B846899 /* PBXTargetDependency */,
+			);
+			name = "Pods-NXGallery_Tests";
+			productName = Pods_NXGallery_Tests;
+			productReference = AC93E21F09C657F7D84A253C173820C7 /* Pods_NXGallery_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB23167A284209CEF96D7FEA4F0226C7 /* Pods-NXGallery_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CCEE30FE9AA65B7FC6BCB330279293 /* Build configuration list for PBXNativeTarget "Pods-NXGallery_Example" */;
+			buildPhases = (
+				293AA2050EF3AFF4D7C2296018409EE0 /* Headers */,
+				76451A854F85A56AC21654DAD577056A /* Sources */,
+				D84DB185F7536BFFB99F7C29F240F1A1 /* Frameworks */,
+				EA457D910161F3CE163107B738B45384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8513A1775F708D2E63A93F881027BC57 /* PBXTargetDependency */,
+			);
+			name = "Pods-NXGallery_Example";
+			productName = Pods_NXGallery_Example;
+			productReference = A35C3DC294D0A97532B295C8C3834C34 /* Pods_NXGallery_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					73C915ADB11742C548F06F71D2C63DE2 = {
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 914FC13D5BA77A481B9D6314368C8C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73C915ADB11742C548F06F71D2C63DE2 /* NXGallery */,
+				DB23167A284209CEF96D7FEA4F0226C7 /* Pods-NXGallery_Example */,
+				7F17BE910871E72B6CEF651083FDE249 /* Pods-NXGallery_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371C95BDB9C0BA3BAEF50ACBA38657BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF9D361BBEA71325DD8AE5B197C0A53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CA75F328B68E8F00FF7291 /* NXGallery.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA457D910161F3CE163107B738B45384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F7D578A776863B574B86C9279A848E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6818BA2F2E04FA780F775B81325ED23 /* NXGallery-dummy.m in Sources */,
+				C6CA75F428B68E8F00FF7291 /* NXGallery.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76451A854F85A56AC21654DAD577056A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF7904958AEF71322DBA2E7A5480C79 /* Pods-NXGallery_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8271E23A7CA5932C285F28B2780EA919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DD9B0CFB03B28A5A62BD528FC6A14C /* Pods-NXGallery_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8513A1775F708D2E63A93F881027BC57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NXGallery;
+			target = 73C915ADB11742C548F06F71D2C63DE2 /* NXGallery */;
+			targetProxy = DB4F15C354662AD2B6AFF0882B3E118A /* PBXContainerItemProxy */;
+		};
+		AE4FA183CE70193411D717252B846899 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-NXGallery_Example";
+			target = DB23167A284209CEF96D7FEA4F0226C7 /* Pods-NXGallery_Example */;
+			targetProxy = 45A8DE28B9C775B74CCC34AC64EDA96C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F86AA6B2F943F2D327F5CEF5F35499F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97CAF9C735C7DBA37083CBEAD3F40B01 /* Pods-NXGallery_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NXGallery_Tests/Pods-NXGallery_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NXGallery_Tests/Pods-NXGallery_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		367B69A3C0C63B5ECD064B7C85AAE1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD1394A12AD3E9E9C02AE3BC4EC1C139 /* NXGallery.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NXGallery/NXGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NXGallery/NXGallery-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NXGallery/NXGallery.modulemap";
+				PRODUCT_MODULE_NAME = NXGallery;
+				PRODUCT_NAME = NXGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51D5E592A47A095246C1B7A477F256EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC0A130F734BD4340AA4CE5AB28608F /* Pods-NXGallery_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NXGallery_Tests/Pods-NXGallery_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NXGallery_Tests/Pods-NXGallery_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D80A3DFE241B2BF17EB23228A85C242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA0CB3CC84E932904AC501C19BF4C9A /* Pods-NXGallery_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NXGallery_Example/Pods-NXGallery_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NXGallery_Example/Pods-NXGallery_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A91AF1EF5962FCE69679156AFE3B42B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B2E99F38B2FF7D7C3FA8AC1B2F1ED1 /* NXGallery.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NXGallery/NXGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NXGallery/NXGallery-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NXGallery/NXGallery.modulemap";
+				PRODUCT_MODULE_NAME = NXGallery;
+				PRODUCT_NAME = NXGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FAF67AA387F676E05E088A3EE5812AD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 912539C7FD4E193BD63E1314C298D868 /* Pods-NXGallery_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NXGallery_Example/Pods-NXGallery_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NXGallery_Example/Pods-NXGallery_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3442D56686A547782AA2F823549681C3 /* Build configuration list for PBXNativeTarget "NXGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				367B69A3C0C63B5ECD064B7C85AAE1A8 /* Debug */,
+				A91AF1EF5962FCE69679156AFE3B42B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		597013270FC6BCDD138E9236EA50C0A9 /* Build configuration list for PBXNativeTarget "Pods-NXGallery_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F86AA6B2F943F2D327F5CEF5F35499F /* Debug */,
+				51D5E592A47A095246C1B7A477F256EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CCEE30FE9AA65B7FC6BCB330279293 /* Build configuration list for PBXNativeTarget "Pods-NXGallery_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D80A3DFE241B2BF17EB23228A85C242 /* Debug */,
+				FAF67AA387F676E05E088A3EE5812AD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

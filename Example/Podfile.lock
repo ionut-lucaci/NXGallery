@@ -1,0 +1,16 @@
+PODS:
+  - NXGallery (0.1.0)
+
+DEPENDENCIES:
+  - NXGallery (from `../`)
+
+EXTERNAL SOURCES:
+  NXGallery:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NXGallery: b74af4be20c2c94227874624b4f94aa141242939
+
+PODFILE CHECKSUM: ade109c9d238924963205b2f5730a39f8808c20d
+
+COCOAPODS: 1.11.3

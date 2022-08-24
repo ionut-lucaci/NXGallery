@@ -1,0 +1,6 @@
+framework module NXGallery {
+  umbrella header "NXGallery-umbrella.h"
+
+  export *
+  module * { export * }
+}

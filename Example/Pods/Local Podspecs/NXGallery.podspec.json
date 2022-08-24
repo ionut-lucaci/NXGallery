@@ -1,0 +1,22 @@
+{
+  "name": "NXGallery",
+  "version": "0.1.0",
+  "summary": "A short description of NXGallery.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ionut-lucaci/NXGallery",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ionut-lucaci": "ionutlucaci@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ionut-lucaci/NXGallery.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "NXGallery/Classes/**/*"
+}

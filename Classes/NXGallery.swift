@@ -10,7 +10,9 @@ import UIKit
 import WebKit
 import RxSwift
 import RxCocoa
+import RxSwiftExt
 import ImageScrollView
+import Toast
 
 
 struct Gallery { 
@@ -61,7 +63,15 @@ class NexuzGalleryViewController: UIPageViewController, UIPageViewControllerData
         return viewControllerAt(index + 1)
     }
     
-    // MARK: - Helpers
+    // MARK: - Public Methods
+    func presentPopover(_ presented: UIViewController, fromSelection selection: Gallery.Item.Action.Selection) {
+        let children = viewControllers as? [GalleryItemViewController]
+        let presenter = children?.first(where: { $0.item.value?.identifier == selection.itemId })
+        presenter?.presentPopover(presented, fromAction: selection.actionId)
+    }
+    
+    
+    // MARK: - Private Helpers
     private func viewControllerAt(_ index: Int) -> UIViewController? {
         guard let galleryItems = gallery.value?.items, 
               index >= 0 && index < galleryItems.count 
@@ -83,13 +93,14 @@ class NexuzGalleryViewController: UIPageViewController, UIPageViewControllerData
         return result
     }
     
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         dataSource = self
         
         gallery
-            .ignoreNil()
+            .unwrap()
             .subscribe(onNext: { [weak self] g in 
                 guard let initialVC = self?.viewControllerAt(g.initialIndex) else {
                     self?.dismiss(animated: true)
@@ -99,13 +110,7 @@ class NexuzGalleryViewController: UIPageViewController, UIPageViewControllerData
                 self?.setViewControllers([initialVC], direction: .forward, animated: false)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func presentPopover(_ presented: UIViewController, fromSelection selection: Gallery.Item.Action.Selection) {
-        let children = viewControllers as? [GalleryItemViewController]
-        let presenter = children?.first(where: { $0.item.value?.identifier == selection.itemId })
-        presenter?.presentPopover(presented, fromAction: selection.actionId)
-    }
+    }        
 }
 
 class GalleryItemViewController: UIViewController {
@@ -116,19 +121,39 @@ class GalleryItemViewController: UIViewController {
     // MARK: - Out
     let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
     
+    // MARK: - Outlets
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var imageScrollView: ImageScrollView!
+    
+    // MARK: - Boilerplate
     let disposeBag = DisposeBag()
     
+    // MARK: - Public Methods
+    func presentPopover(_ vc: UIViewController, fromAction id: String) { 
+        if let index = item.value?.actions.firstIndex(where: { $0.identifier == id }) {             
+            vc.modalPresentationStyle = .popover
+            vc.popoverPresentationController?.delegate = self
+            
+            let button = buttonStackView.subviews[index + 1]
+            vc.popoverPresentationController?.sourceView = button
+            vc.popoverPresentationController?.sourceRect = button.bounds
+            vc.popoverPresentationController?.permittedArrowDirections = .up            
+        }
+        
+        present(vc, animated: true)
+    }
+    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         imageScrollView.setup()
         
-        view.showToastActivity()
+        view.makeToastActivity(CSToastPositionCenter)
+
         item
-            .ignoreNil()
+            .unwrap()
             .flatMap { $0.content }
             .subscribe(onNext: { [weak self] content in
                 self?.view.hideToastActivity()
@@ -146,7 +171,7 @@ class GalleryItemViewController: UIViewController {
             .disposed(by: disposeBag)
         
         item
-            .ignoreNil()
+            .unwrap()
             .subscribe(onNext: { [weak self] item in     
                 guard let welf = self else { return }
                 for action in item.actions { 
@@ -182,22 +207,9 @@ class GalleryItemViewController: UIViewController {
         super.viewDidAppear(animated)
         webView.reload()
     }
-    
-    func presentPopover(_ vc: UIViewController, fromAction id: String) { 
-        if let index = item.value?.actions.firstIndex(where: { $0.identifier == id }) {             
-            vc.modalPresentationStyle = .popover
-            vc.popoverPresentationController?.delegate = self
-            
-            let button = buttonStackView.subviews[index + 1]
-            vc.popoverPresentationController?.sourceView = button
-            vc.popoverPresentationController?.sourceRect = button.bounds
-            vc.popoverPresentationController?.permittedArrowDirections = .up            
-        }
-        
-        present(vc, animated: true)
-    }
 }
 
+// MARK: - Extensions
 
 extension GalleryItemViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
