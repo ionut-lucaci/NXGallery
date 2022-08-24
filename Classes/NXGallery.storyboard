@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KgI-UP-LaD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gallery View Controller-->
+        <scene sceneID="xQz-qn-OIu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="KgI-UP-LaD" customClass="NXGalleryViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR0-9a-QoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="989"/>
+        </scene>
+        <!--Gallery Item View Controller-->
+        <scene sceneID="a4s-em-gGv">
+            <objects>
+                <viewController storyboardIdentifier="GalleryItemViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fWF-k3-ZDz" customClass="GalleryItemViewController" customModule="NXGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyY-Ej-boH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-HO-F5J">
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-b8-yPu" customClass="ImageScrollView" customModule="ImageScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="fGi-Dy-l9l"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8f4-Mb-1lj"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-4H-iIL">
+                                <rect key="frame" x="8" y="44" width="48" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE7-Y8-GG6">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="close-white"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Sr-mY-1Zw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oib-MO-q5W"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7BY-4H-iIL" firstAttribute="leading" secondItem="oib-MO-q5W" secondAttribute="leading" constant="8" id="IyL-eJ-8jj"/>
+                            <constraint firstAttribute="trailing" secondItem="gpX-b8-yPu" secondAttribute="trailing" id="MCJ-Lz-PJE"/>
+                            <constraint firstItem="Lpa-HO-F5J" firstAttribute="top" secondItem="7BY-4H-iIL" secondAttribute="bottom" constant="8" symbolic="YES" id="STE-OU-dUf"/>
+                            <constraint firstItem="gpX-b8-yPu" firstAttribute="leading" secondItem="ZyY-Ej-boH" secondAttribute="leading" id="U9j-2s-bdI"/>
+                            <constraint firstItem="Lpa-HO-F5J" firstAttribute="trailing" secondItem="oib-MO-q5W" secondAttribute="trailing" id="eS1-mZ-0Zw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Lpa-HO-F5J" secondAttribute="bottom" id="o5I-NC-mNT"/>
+                            <constraint firstItem="gpX-b8-yPu" firstAttribute="top" secondItem="ZyY-Ej-boH" secondAttribute="top" id="q2F-wN-7Tp"/>
+                            <constraint firstAttribute="bottom" secondItem="gpX-b8-yPu" secondAttribute="bottom" id="qKV-HZ-FLN"/>
+                            <constraint firstItem="7BY-4H-iIL" firstAttribute="top" secondItem="oib-MO-q5W" secondAttribute="top" id="uMO-Zk-mi2"/>
+                            <constraint firstItem="Lpa-HO-F5J" firstAttribute="leading" secondItem="oib-MO-q5W" secondAttribute="leading" id="viZ-cQ-aGg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonStackView" destination="7BY-4H-iIL" id="T8F-IY-Jb8"/>
+                        <outlet property="closeButton" destination="HE7-Y8-GG6" id="EGM-Q1-FEd"/>
+                        <outlet property="imageScrollView" destination="gpX-b8-yPu" id="Lct-Cb-Bgi"/>
+                        <outlet property="webView" destination="Lpa-HO-F5J" id="b8t-GX-XgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY4-fS-VwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="988"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-white" width="24" height="24"/>
+    </resources>
+</document>
