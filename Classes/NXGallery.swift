@@ -42,7 +42,7 @@ struct Gallery {
     }
 }
 
-class NexuzGalleryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class GalleryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     // MARK: - In
     let gallery = BehaviorRelay<Gallery?>(value: nil)    
     
@@ -77,7 +77,7 @@ class NexuzGalleryViewController: UIPageViewController, UIPageViewControllerData
               index >= 0 && index < galleryItems.count 
         else { return nil }   
                 
-        let storyboard = UIStoryboard(name: "NexuzGallery", bundle: nil)          
+        let storyboard = UIStoryboard(name: "NXGallery", bundle: nil)          
         guard let result = storyboard.instantiateViewController(withIdentifier: "GalleryItemViewController") as? GalleryItemViewController else { 
             return nil
         }
