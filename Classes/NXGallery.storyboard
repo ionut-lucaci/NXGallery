@@ -39,13 +39,13 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="8f4-Mb-1lj"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-4H-iIL">
-                                <rect key="frame" x="8" y="44" width="48" height="44"/>
+                                <rect key="frame" x="8" y="44" width="42" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE7-Y8-GG6">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="close-white"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -81,6 +81,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close-white" width="24" height="24"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>
