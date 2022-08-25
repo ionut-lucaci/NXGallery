@@ -18,13 +18,24 @@ import Toast
 
 
 public struct Gallery { 
-    public let initialIndex: Int
     public let items: [Item]
+    public let initialIndex: Int
+    
+    public init(items: [Item] = [], initialIndex: Int = 0) { 
+        self.items = items
+        self.initialIndex = initialIndex
+    }
     
     public struct Item { 
         public let identifier: String
         public let content: Observable<Content>
         public let actions: [Action]
+        
+        public init(identifier: String, content: Observable<Content>, actions: [Action] = []) { 
+            self.identifier = identifier
+            self.content = content
+            self.actions = actions
+        }
         
         public enum Content { 
             case image(_: UIImage)
@@ -35,10 +46,20 @@ public struct Gallery {
         public struct Action { 
             public let identifier: String
             public let icon: Observable<UIImage>
+            
+            public init(identifier: String, icon: Observable<UIImage>) { 
+                self.identifier = identifier
+                self.icon = icon
+            }
                         
             public struct Selection {
                 let actionId: String
                 let itemId: String
+                
+                public init(actionId: String, itemId: String) { 
+                    self.actionId = actionId
+                    self.itemId = itemId
+                }
             }
         }                
     }
