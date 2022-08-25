@@ -99,8 +99,10 @@ public class GalleryContainerViewController: UIPageViewController, UIPageViewCon
         guard let galleryItems = gallery.value?.items, 
               index >= 0 && index < galleryItems.count 
         else { return nil }   
-                
-        let storyboard = UIStoryboard(name: "NXGallery", bundle: nil)          
+        
+        guard let bundle = Bundle(identifier: "org.cocoapods.NXGallery") else { return nil }
+        
+        let storyboard = UIStoryboard(name: "NXGallery", bundle: bundle)          
         guard let result = storyboard.instantiateViewController(withIdentifier: "GalleryItemViewController") as? GalleryItemViewController else { 
             return nil
         }
