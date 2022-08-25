@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NXGallery'
-  s.version          = '0.2'
-  s.summary          = 'A description of NXGallery.'
+  s.version          = '0.3'
+  s.summary          = 'A swipe-able zoomable gallery based on ImageScrollView and RxSwift. Has action support.'
   s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'NXGallery/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
   #   'NXGallery' => ['NXGallery/Assets/*.png']

@@ -15,26 +15,26 @@ import ImageScrollView
 import Toast
 
 
-struct Gallery { 
-    let initialIndex: Int
-    let items: [Item]
+public struct Gallery { 
+    public let initialIndex: Int
+    public let items: [Item]
     
-    struct Item { 
-        let identifier: String
-        let content: Observable<Content>
-        let actions: [Action]
+    public struct Item { 
+        public let identifier: String
+        public let content: Observable<Content>
+        public let actions: [Action]
         
-        enum Content { 
+        public enum Content { 
             case image(_: UIImage)
             case video(url: URL)
             case document(url: URL)
         }
         
-        struct Action { 
-            let identifier: String
-            let icon: Observable<UIImage>
+        public struct Action { 
+            public let identifier: String
+            public let icon: Observable<UIImage>
                         
-            struct Selection {
+            public struct Selection {
                 let actionId: String
                 let itemId: String
             }
@@ -42,29 +42,29 @@ struct Gallery {
     }
 }
 
-class GalleryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+public class GalleryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     // MARK: - In
-    let gallery = BehaviorRelay<Gallery?>(value: nil)    
+    public let gallery = BehaviorRelay<Gallery?>(value: nil)    
     
     // MARK: - Out
-    let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
+    public let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
     
     // MARK: - Boilerplate
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
     
     // MARK: - PageViewController delegate
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let index = (viewController as? GalleryItemViewController)?.index ?? 0
         return viewControllerAt(index - 1)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let index = (viewController as? GalleryItemViewController)?.index ?? 0
         return viewControllerAt(index + 1)
     }
     
     // MARK: - Public Methods
-    func presentPopover(_ presented: UIViewController, fromSelection selection: Gallery.Item.Action.Selection) {
+    public func presentPopover(_ presented: UIViewController, fromSelection selection: Gallery.Item.Action.Selection) {
         let children = viewControllers as? [GalleryItemViewController]
         let presenter = children?.first(where: { $0.item.value?.identifier == selection.itemId })
         presenter?.presentPopover(presented, fromAction: selection.actionId)
@@ -94,7 +94,7 @@ class GalleryViewController: UIPageViewController, UIPageViewControllerDataSourc
     }
     
     // MARK: - Overrides
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         dataSource = self
@@ -113,13 +113,13 @@ class GalleryViewController: UIPageViewController, UIPageViewControllerDataSourc
     }        
 }
 
-class GalleryItemViewController: UIViewController {
+public class GalleryItemViewController: UIViewController {
     // MARK: - In
-    var index = 0    
-    let item = BehaviorRelay<Gallery.Item?>(value: nil)
+    public var index = 0    
+    public let item = BehaviorRelay<Gallery.Item?>(value: nil)
     
     // MARK: - Out
-    let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
+    public let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
     
     // MARK: - Outlets
     @IBOutlet weak var buttonStackView: UIStackView!
@@ -128,10 +128,10 @@ class GalleryItemViewController: UIViewController {
     @IBOutlet weak var imageScrollView: ImageScrollView!
     
     // MARK: - Boilerplate
-    let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
     
     // MARK: - Public Methods
-    func presentPopover(_ vc: UIViewController, fromAction id: String) { 
+    public func presentPopover(_ vc: UIViewController, fromAction id: String) { 
         if let index = item.value?.actions.firstIndex(where: { $0.identifier == id }) {             
             vc.modalPresentationStyle = .popover
             vc.popoverPresentationController?.delegate = self
@@ -146,7 +146,7 @@ class GalleryItemViewController: UIViewController {
     }
     
     // MARK: - Overrides
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         imageScrollView.setup()
         
@@ -203,7 +203,7 @@ class GalleryItemViewController: UIViewController {
             .disposed(by: disposeBag)
     } 
     
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         webView.reload()
     }
@@ -212,7 +212,7 @@ class GalleryItemViewController: UIViewController {
 // MARK: - Extensions
 
 extension GalleryItemViewController: UIPopoverPresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    public func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }
 }
