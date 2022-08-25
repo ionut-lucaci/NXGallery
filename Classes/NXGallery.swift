@@ -53,8 +53,8 @@ public struct Gallery {
             }
                         
             public struct Selection {
-                let actionId: String
-                let itemId: String
+                public let actionId: String
+                public let itemId: String
                 
                 public init(actionId: String, itemId: String) { 
                     self.actionId = actionId
