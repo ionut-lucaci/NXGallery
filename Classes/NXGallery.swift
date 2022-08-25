@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 import WebKit
+
 import RxSwift
 import RxCocoa
 import RxSwiftExt
+
 import ImageScrollView
 import Toast
 
@@ -42,7 +44,7 @@ public struct Gallery {
     }
 }
 
-public class GalleryViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+public class GalleryContainerViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     // MARK: - In
     public let gallery = BehaviorRelay<Gallery?>(value: nil)    
     
