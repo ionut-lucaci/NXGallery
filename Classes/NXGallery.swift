@@ -14,7 +14,6 @@ import RxCocoa
 import RxSwiftExt
 
 import ImageScrollView
-import Toast
 
 
 public struct Gallery { 
@@ -151,6 +150,7 @@ public class GalleryItemViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var imageScrollView: ImageScrollView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Boilerplate
     public let disposeBag = DisposeBag()
@@ -175,13 +175,15 @@ public class GalleryItemViewController: UIViewController {
         super.viewDidLoad()
         imageScrollView.setup()
         
-        view.makeToastActivity(CSToastPositionCenter)
+        activityIndicator.setIndicatingActivity(true)
 
         item
             .unwrap()
             .flatMap { $0.content }
             .subscribe(onNext: { [weak self] content in
-                self?.view.hideToastActivity()
+                
+                self?.activityIndicator.setIndicatingActivity(false)
+                
                 switch content { 
                 case .image(let img):
                     self?.imageScrollView?.display(image: img)
@@ -239,5 +241,17 @@ public class GalleryItemViewController: UIViewController {
 extension GalleryItemViewController: UIPopoverPresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
+    }
+}
+
+private extension UIActivityIndicatorView { 
+    func setIndicatingActivity(_ indicating: Bool) {
+        isHidden = !indicating
+        
+        if indicating { 
+            startAnimating()
+        } else { 
+            stopAnimating()
+        }
     }
 }

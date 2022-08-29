@@ -54,6 +54,11 @@
                                     <constraint firstAttribute="height" constant="44" id="3Sr-mY-1Zw"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-fs-JUz">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oib-MO-q5W"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +67,9 @@
                             <constraint firstAttribute="trailing" secondItem="gpX-b8-yPu" secondAttribute="trailing" id="MCJ-Lz-PJE"/>
                             <constraint firstItem="Lpa-HO-F5J" firstAttribute="top" secondItem="7BY-4H-iIL" secondAttribute="bottom" constant="8" symbolic="YES" id="STE-OU-dUf"/>
                             <constraint firstItem="gpX-b8-yPu" firstAttribute="leading" secondItem="ZyY-Ej-boH" secondAttribute="leading" id="U9j-2s-bdI"/>
+                            <constraint firstItem="o0n-fs-JUz" firstAttribute="centerY" secondItem="oib-MO-q5W" secondAttribute="centerY" id="eHV-0G-HR4"/>
                             <constraint firstItem="Lpa-HO-F5J" firstAttribute="trailing" secondItem="oib-MO-q5W" secondAttribute="trailing" id="eS1-mZ-0Zw"/>
+                            <constraint firstItem="o0n-fs-JUz" firstAttribute="centerX" secondItem="oib-MO-q5W" secondAttribute="centerX" id="fg4-5D-uEj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Lpa-HO-F5J" secondAttribute="bottom" id="o5I-NC-mNT"/>
                             <constraint firstItem="gpX-b8-yPu" firstAttribute="top" secondItem="ZyY-Ej-boH" secondAttribute="top" id="q2F-wN-7Tp"/>
                             <constraint firstAttribute="bottom" secondItem="gpX-b8-yPu" secondAttribute="bottom" id="qKV-HZ-FLN"/>
@@ -71,6 +78,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="o0n-fs-JUz" id="L7H-mI-5Qt"/>
                         <outlet property="buttonStackView" destination="7BY-4H-iIL" id="T8F-IY-Jb8"/>
                         <outlet property="closeButton" destination="HE7-Y8-GG6" id="EGM-Q1-FEd"/>
                         <outlet property="imageScrollView" destination="gpX-b8-yPu" id="Lct-Cb-Bgi"/>

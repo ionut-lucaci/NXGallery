@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NXGallery'
-  s.version          = '0.9.1'
+  s.version          = '0.9.2'
   s.summary          = 'A swipe-able zoomable gallery based on ImageScrollView and RxSwift. Has action support.'
   s.swift_version    = '5.0'
 
@@ -44,5 +44,4 @@ Pod::Spec.new do |s|
   s.dependency 'RxCocoa'
   s.dependency 'RxSwiftExt'
   s.dependency 'ImageScrollView'
-  s.dependency 'Toast'
 end

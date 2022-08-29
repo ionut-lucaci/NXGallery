@@ -12,7 +12,6 @@ target 'NXGallery_Example' do
     pod "RxCocoa"
     pod "RxSwiftExt"
     pod "ImageScrollView"
-    pod "Toast"
     
   end
 end
