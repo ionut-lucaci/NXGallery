@@ -204,7 +204,7 @@ public class GalleryItemViewController: UIViewController {
                 for action in item.actions { 
                     let b = UIButton(type: .custom)
                     b.frame.size = welf.closeButton.frame.size
-                    b.tintColor = .white
+                    b.setTitleColor(.white, for: .normal)
                     
                     action
                         .icon

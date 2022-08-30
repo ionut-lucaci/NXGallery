@@ -3,15 +3,12 @@ use_frameworks!
 platform :ios, '12.0'
 
 target 'NXGallery_Example' do
-  pod 'NXGallery', :path => '../'
+  pod 'NXGallery', :path => '../'  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
 
   target 'NXGallery_Tests' do
-    inherit! :search_paths
-
-    pod "RxSwift"
-    pod "RxCocoa"
-    pod "RxSwiftExt"
-    pod "ImageScrollView"
-    
+    inherit! :search_paths    
   end
 end

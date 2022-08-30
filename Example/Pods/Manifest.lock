@@ -1,16 +1,60 @@
 PODS:
-  - NXGallery (0.1.0)
+  - Differentiator (5.0.0)
+  - ImageScrollView (1.9.3)
+  - NXGallery (0.9.3):
+    - ImageScrollView
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxSwiftExt (6.0.1):
+    - RxSwiftExt/Core (= 6.0.1)
+    - RxSwiftExt/RxCocoa (= 6.0.1)
+  - RxSwiftExt/Core (6.0.1):
+    - RxSwift (~> 6.0)
+  - RxSwiftExt/RxCocoa (6.0.1):
+    - RxCocoa (~> 6.0)
+    - RxSwiftExt/Core
 
 DEPENDENCIES:
   - NXGallery (from `../`)
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - ImageScrollView
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
 
 EXTERNAL SOURCES:
   NXGallery:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NXGallery: b74af4be20c2c94227874624b4f94aa141242939
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  ImageScrollView: d3ce8371e0d44299b2b638410db45387e18aa83f
+  NXGallery: 79f58da6dcff755ea2f0cfd1a8f2b307969cdbda
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
 
-PODFILE CHECKSUM: ade109c9d238924963205b2f5730a39f8808c20d
+PODFILE CHECKSUM: aefcf791a30536f86154164c48bf809634570f1a
 
 COCOAPODS: 1.11.3
