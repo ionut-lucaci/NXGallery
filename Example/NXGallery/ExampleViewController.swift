@@ -39,9 +39,24 @@ class ExampleViewController: UICollectionViewController, UICollectionViewDelegat
             .disposed(by: viewModel.disposeBag)
         
         viewModel
-            .segue
-            .subscribe(onNext: { [weak self] segue in  
-                self?.performSegue(withIdentifier: segue.id, sender: self?.viewModel)
+            .navigation
+            .subscribe(onNext: { [weak self] nav in  
+                switch nav { 
+                case .segue(let segue):
+                    self?.performSegue(withIdentifier: segue.id, sender: self?.viewModel)
+                    
+                case .alert(let title, let message):                    
+                    // the gallery could be already presented, or not, the view controller doesn't care
+                    // (shhh... it's always the gallery who sends alerts in this example app)
+                    let presenter = (self?.presentedViewController ?? self)
+                    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { [weak alertVC] _ in
+                        alertVC?.dismiss(animated: true)
+                    }))
+                    
+                    presenter?.present(alertVC, animated: true)
+                }
+                
             })
             .disposed(by: viewModel.disposeBag)
     }
@@ -49,10 +64,15 @@ class ExampleViewController: UICollectionViewController, UICollectionViewDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? GalleryContainerViewController { 
             viewModel
-                .segue
-                .map { $0.gallery }
+                .navigation
+                .map { $0.segue?.gallery }
                 .unwrap()
                 .bind(to: dest.gallery)
+                .disposed(by: dest.disposeBag)
+            
+            dest
+                .actionSelected
+                .bind(to: viewModel.actionSelected)
                 .disposed(by: dest.disposeBag)
         }
     }

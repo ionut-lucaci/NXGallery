@@ -14,25 +14,32 @@ import NXGallery
 
 typealias ExampleItem = ExampleViewModel.Item
 typealias ExampleSection = SectionModel<Void, ExampleItem>  
-typealias ExampleSegue = ExampleViewModel.Segue
+typealias ExampleNavigation = ExampleViewModel.Navigation
 
 class ExampleViewModel { 
     // MARK: - In
     let itemSelected = PublishRelay<Item>()
+    let actionSelected = PublishRelay<Gallery.Item.Action.Selection>()
     
     // MARK: - Out
     let sections = BehaviorRelay<[ExampleSection]>(value: [])
-    let segue = ReplayRelay<Segue>.create(bufferSize: 1)
+    let navigation = ReplayRelay<Navigation>.create(bufferSize: 1)
     
     // MARK: - Structures
     struct Item {    
         let model: ExampleModel
         let image: Observable<UIImage>      
     }
-    
-    enum Segue { 
-        case gallery(_: Gallery)
+   
+    enum Navigation { 
+        case segue(_: Segue)
+        case alert(title: String, message: String)
+        
+        enum Segue { 
+            case gallery(_: Gallery)
+        }
     }
+   
     
     // MARK: - Boilerplate
     let disposeBag = DisposeBag()
@@ -76,13 +83,21 @@ class ExampleViewModel {
                                         actions: actions)
                 }
                 
-                return .gallery(Gallery(items: galleryItems,
-                                        initialIndex: index))
+                return Navigation.segue(.gallery(Gallery(items: galleryItems,
+                                                         initialIndex: index)))
             }
-            .bind(to: segue)
-            .disposed(by: disposeBag)            
+            .bind(to: navigation)
+            .disposed(by: disposeBag)
+        
+        actionSelected
+            .map { Navigation.alert(title: "Gallery action selected", 
+                                    message: "item: \($0.itemId)\naction: \($0.actionId)") }
+            .bind(to: navigation)
+            .disposed(by: disposeBag)
     }
 }
+
+// MARK: - Extensions
 
 extension ExampleItem: Equatable {     
     static func == (lhs: ExampleViewModel.Item, rhs: ExampleViewModel.Item) -> Bool {
@@ -90,7 +105,18 @@ extension ExampleItem: Equatable {
     }       
 }
 
-extension ExampleSegue { 
+extension ExampleNavigation { 
+    var segue: Segue? { 
+        switch self { 
+        case .segue(let s):
+            return s
+        default:
+            return nil
+        }
+    }
+}
+
+extension ExampleNavigation.Segue { 
     var id: String { 
         switch self { 
         case .gallery:
