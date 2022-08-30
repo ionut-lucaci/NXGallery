@@ -58,12 +58,22 @@ class ExampleViewModel {
         itemSelected
             .withLatestFrom(items) { selection, items in 
                 let index = items.firstIndex(of: selection) ?? 0
-                let galleryItems = items.map { item -> Gallery.Item in                     
-//                    let actions: [GalleryActionId] = (protected ? [.info, .protected] : [.info])
+                let galleryItems = items.map { item -> Gallery.Item in                                
                     let content = item.image.map { Gallery.Item.Content.image($0) }
+                    
+                    // faux actions with faux icons 
+                    var actions = [Gallery.Item.Action(identifier: "star", 
+                                                       icon: .just(UIImage(named: "star-icon-\(item.model.id)")!
+                                                        .withRenderingMode(.alwaysTemplate)))]
+                    if item.model.canTrek { 
+                        actions.append(Gallery.Item.Action(identifier: "trek", 
+                                                           icon: .just(UIImage(named: "trek-icon")!
+                                                            .withRenderingMode(.alwaysTemplate))))
+                    }
+                    
                     return Gallery.Item(identifier: item.model.id,
-                                        content: content) 
-//                                 actions: actions.map { $0.action })
+                                        content: content, 
+                                        actions: actions)
                 }
                 
                 return .gallery(Gallery(items: galleryItems,
