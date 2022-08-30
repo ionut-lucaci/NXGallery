@@ -3,6 +3,7 @@
 //  NXGallery_Example
 //
 //  Created by Ionut Lucaci on 30.08.2022.
+//  Copyright © 2022. All rights reserved.
 //
 
 import Foundation

@@ -3,6 +3,7 @@
 //  NXGallery
 //
 //  Created by ionut-lucaci on 08/24/2022.
+//  Copyright © 2022. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +13,8 @@ import RxSwiftExt
 import RxDataSources
 import NXGallery
 
+
+// MARK: - View Controller
 class ExampleViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout { 
     lazy var viewModel = ExampleViewModel()
     
@@ -97,6 +100,8 @@ class ExampleViewController: UICollectionViewController, UICollectionViewDelegat
         }
     }
 }
+
+// MARK: - Cell
 
 class ExampleCell: UICollectionViewCell { 
     @IBOutlet weak var imageView: UIImageView!

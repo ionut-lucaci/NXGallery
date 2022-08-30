@@ -50,7 +50,7 @@
 		6807F8F2FFC06F48A6059B13 /* Pods-NXGallery_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXGallery_Tests.debug.xcconfig"; path = "Target Support Files/Pods-NXGallery_Tests/Pods-NXGallery_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C61AA5CE28BE978600FEFC0C /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 		C61AA5D028BE97A000FEFC0C /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
-		DEBCC09394093C384337B0DE /* NXGallery.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NXGallery.podspec; path = ../NXGallery.podspec; sourceTree = "<group>"; };
+		DEBCC09394093C384337B0DE /* NXGallery.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NXGallery.podspec; path = ../NXGallery.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
