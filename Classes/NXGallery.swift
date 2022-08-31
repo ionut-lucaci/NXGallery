@@ -187,10 +187,17 @@ public class GalleryItemViewController: UIViewController {
                 switch content { 
                 case .image(let img):
                     self?.imageScrollView?.display(image: img)
+                    
                     self?.imageScrollView.isHidden = false
                     self?.webView.isHidden = true
+                    
                 case .video(url: let url), .document(url: let url):
-                    self?.webView.loadFileURL(url, allowingReadAccessTo: url)
+                    if url.isFileURL { 
+                        self?.webView.loadFileURL(url, allowingReadAccessTo: url)  
+                    } else { 
+                        self?.webView.load(URLRequest(url: url))
+                    }
+
                     self?.imageScrollView.isHidden = true
                     self?.webView.isHidden = false                
                 }                
