@@ -48,16 +48,18 @@ class ExampleViewController: UICollectionViewController, UICollectionViewDelegat
                 case .segue(let segue):
                     self?.performSegue(withIdentifier: segue.id, sender: self?.viewModel)
                     
-                case .alert(let title, let message):                    
-                    // the gallery could be already presented, or not, the view controller doesn't care
-                    // (shhh... it's always the gallery who sends alerts in this example app)
-                    let presenter = (self?.presentedViewController ?? self)
-                    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { [weak alertVC] _ in
-                        alertVC?.dismiss(animated: true)
-                    }))
+                case .galleryPopover(let title, let message, let src):                                        
+                    let gallery = self?.presentedViewController as? GalleryContainerViewController
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     
-                    presenter?.present(alertVC, animated: true)
+                    guard let popover = storyboard
+                        .instantiateViewController(withIdentifier: "ExamplePopoverViewController") 
+                            as? ExamplePopoverViewController else { return }                        
+                    
+                    popover.title = title
+                    popover.message = message
+                    
+                    gallery?.presentPopover(popover, fromSelection: src)
                 }
                 
             })

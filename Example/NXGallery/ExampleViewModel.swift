@@ -34,7 +34,7 @@ class ExampleViewModel {
    
     enum Navigation { 
         case segue(_: Segue)
-        case alert(title: String, message: String)
+        case galleryPopover(title: String, message: String, source: Gallery.Item.Action.Selection)
         
         enum Segue { 
             case gallery(_: Gallery)
@@ -91,8 +91,9 @@ class ExampleViewModel {
             .disposed(by: disposeBag)
         
         actionSelected
-            .map { Navigation.alert(title: "Gallery action selected", 
-                                    message: "item: \($0.itemId)\naction: \($0.actionId)") }
+            .map { Navigation.galleryPopover(title: "Gallery action selected", 
+                                             message: "item: \($0.itemId), action: \($0.actionId)", 
+                                             source: $0) }
             .bind(to: navigation)
             .disposed(by: disposeBag)
     }

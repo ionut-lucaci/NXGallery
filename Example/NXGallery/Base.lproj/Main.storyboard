@@ -73,8 +73,60 @@
             </objects>
             <point key="canvasLocation" x="450" y="98"/>
         </scene>
+        <!--Example Popover View Controller-->
+        <scene sceneID="4Zl-1z-hyr">
+            <objects>
+                <viewController storyboardIdentifier="ExamplePopoverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hg6-yU-Xh5" customClass="ExamplePopoverViewController" customModule="NXGallery_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofo-hA-sHp"/>
+                        <viewControllerLayoutGuide type="bottom" id="GWg-SG-Jby"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPc-kM-tct">
+                        <rect key="frame" x="0.0" y="0.0" width="132" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmr-UX-i0f">
+                                <rect key="frame" x="32" y="16" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="222" verticalHuggingPriority="222" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wz-Yv-ZnN">
+                                <rect key="frame" x="32" y="38.5" width="68" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xmr-UX-i0f" secondAttribute="trailing" constant="16" id="EnB-OO-3Km"/>
+                            <constraint firstItem="0Wz-Yv-ZnN" firstAttribute="leading" secondItem="oPc-kM-tct" secondAttribute="leadingMargin" constant="16" id="XZD-lU-KMD"/>
+                            <constraint firstItem="0Wz-Yv-ZnN" firstAttribute="top" secondItem="xmr-UX-i0f" secondAttribute="bottom" constant="2" id="c7I-i9-Md1"/>
+                            <constraint firstItem="xmr-UX-i0f" firstAttribute="top" secondItem="Ofo-hA-sHp" secondAttribute="bottom" constant="16" id="duJ-In-qGz"/>
+                            <constraint firstItem="xmr-UX-i0f" firstAttribute="leading" secondItem="oPc-kM-tct" secondAttribute="leadingMargin" constant="16" id="eTv-TE-jZK"/>
+                            <constraint firstItem="GWg-SG-Jby" firstAttribute="top" secondItem="0Wz-Yv-ZnN" secondAttribute="bottom" constant="16" id="rre-2h-fcf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Wz-Yv-ZnN" secondAttribute="trailing" constant="16" id="xMn-TS-6Te"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="132" height="73"/>
+                    <connections>
+                        <outlet property="bottomPadding" destination="rre-2h-fcf" id="A5Z-uI-ZRS"/>
+                        <outlet property="interimSpacing" destination="c7I-i9-Md1" id="s3I-Au-bSP"/>
+                        <outlet property="messageLabel" destination="0Wz-Yv-ZnN" id="Gjf-1J-jWX"/>
+                        <outlet property="titleLabel" destination="xmr-UX-i0f" id="f2T-k2-WHZ"/>
+                        <outlet property="topPadding" destination="duJ-In-qGz" id="SNG-zK-plD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjS-Lq-hmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742.39999999999998" y="96.7016491754123"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
