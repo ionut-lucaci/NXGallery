@@ -205,6 +205,7 @@ public class GalleryItemViewController: UIViewController {
                     let b = UIButton(type: .custom)
                     b.frame.size = welf.closeButton.frame.size
                     b.setTitleColor(.white, for: .normal)
+                    b.imageView?.tintColor = .white
                     b.tintColor = .white
                     
                     action
