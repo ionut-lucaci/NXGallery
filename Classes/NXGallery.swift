@@ -51,7 +51,7 @@ public struct Gallery {
                 self.icon = icon
             }
                         
-            public struct Selection {
+            public struct Selection: Equatable {
                 public let actionId: String
                 public let itemId: String
                 
