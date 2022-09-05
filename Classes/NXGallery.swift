@@ -265,3 +265,25 @@ private extension UIActivityIndicatorView {
         }
     }
 }
+
+class GradientBackgroundView: UIView { 
+    let gradientLayer = CAGradientLayer()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.6).cgColor,
+                                UIColor.clear.cgColor]
+        
+        let sublayers = layer.sublayers ?? []
+        if sublayers.isEmpty { 
+            layer.addSublayer(gradientLayer)
+        } else { 
+            layer.insertSublayer(gradientLayer, at: 0)
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
+    }
+}

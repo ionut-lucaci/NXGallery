@@ -38,6 +38,10 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="fGi-Dy-l9l"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="8f4-Mb-1lj"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYg-KN-jb3" customClass="GradientBackgroundView" customModule="NXGallery" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-4H-iIL">
                                 <rect key="frame" x="8" y="44" width="42" height="44"/>
                                 <subviews>
@@ -63,13 +67,17 @@
                         <viewLayoutGuide key="safeArea" id="oib-MO-q5W"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TYg-KN-jb3" firstAttribute="trailing" secondItem="oib-MO-q5W" secondAttribute="trailing" id="Fv4-y1-gbQ"/>
                             <constraint firstItem="7BY-4H-iIL" firstAttribute="leading" secondItem="oib-MO-q5W" secondAttribute="leading" constant="8" id="IyL-eJ-8jj"/>
+                            <constraint firstItem="TYg-KN-jb3" firstAttribute="top" secondItem="ZyY-Ej-boH" secondAttribute="top" id="K21-bW-SDe"/>
                             <constraint firstAttribute="trailing" secondItem="gpX-b8-yPu" secondAttribute="trailing" id="MCJ-Lz-PJE"/>
                             <constraint firstItem="Lpa-HO-F5J" firstAttribute="top" secondItem="7BY-4H-iIL" secondAttribute="bottom" constant="8" symbolic="YES" id="STE-OU-dUf"/>
                             <constraint firstItem="gpX-b8-yPu" firstAttribute="leading" secondItem="ZyY-Ej-boH" secondAttribute="leading" id="U9j-2s-bdI"/>
+                            <constraint firstItem="TYg-KN-jb3" firstAttribute="bottom" secondItem="7BY-4H-iIL" secondAttribute="bottom" constant="16" id="a5G-J1-0gl"/>
                             <constraint firstItem="o0n-fs-JUz" firstAttribute="centerY" secondItem="oib-MO-q5W" secondAttribute="centerY" id="eHV-0G-HR4"/>
                             <constraint firstItem="Lpa-HO-F5J" firstAttribute="trailing" secondItem="oib-MO-q5W" secondAttribute="trailing" id="eS1-mZ-0Zw"/>
                             <constraint firstItem="o0n-fs-JUz" firstAttribute="centerX" secondItem="oib-MO-q5W" secondAttribute="centerX" id="fg4-5D-uEj"/>
+                            <constraint firstItem="TYg-KN-jb3" firstAttribute="leading" secondItem="oib-MO-q5W" secondAttribute="leading" id="mYP-et-Eef"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Lpa-HO-F5J" secondAttribute="bottom" id="o5I-NC-mNT"/>
                             <constraint firstItem="gpX-b8-yPu" firstAttribute="top" secondItem="ZyY-Ej-boH" secondAttribute="top" id="q2F-wN-7Tp"/>
                             <constraint firstAttribute="bottom" secondItem="gpX-b8-yPu" secondAttribute="bottom" id="qKV-HZ-FLN"/>
