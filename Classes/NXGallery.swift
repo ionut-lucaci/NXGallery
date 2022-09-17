@@ -40,6 +40,7 @@ public struct Gallery {
             case image(_: UIImage)
             case video(url: URL)
             case document(url: URL)
+            case html(_: String)
         }
         
         public struct Action { 
@@ -199,7 +200,12 @@ public class GalleryItemViewController: UIViewController {
                     }
 
                     self?.imageScrollView.isHidden = true
-                    self?.webView.isHidden = false                
+                    self?.webView.isHidden = false
+                case .html(let code):
+                    self?.webView.loadHTMLString(code, baseURL: nil)
+                    
+                    self?.imageScrollView.isHidden = true
+                    self?.webView.isHidden = false         
                 }                
             })
             .disposed(by: disposeBag)
